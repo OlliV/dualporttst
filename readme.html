@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>DUALPORT MODULE FOR SDRAM CONTROLLER</title>
+<link rev="made" href="mailto:" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#dualport_module_for_sdram_controller">DUALPORT MODULE FOR SDRAM CONTROLLER</a></li>
+	<li><a href="#application_directory_tree">APPLICATION DIRECTORY TREE</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#copyright_and_license">COPYRIGHT AND LICENSE</a></li>
+	<li><a href="#history">HISTORY</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<hr />
+<h1><a name="dualport_module_for_sdram_controller">DUALPORT MODULE FOR SDRAM CONTROLLER</a></h1>
+<p>These are the design files for the dualport module that attaches to the SDRAM controller core
+and the surrounding application that uses the core to test the SDRAM on the XESS FPGA boards.</p>
+<p>You can find application notes about the dualport module at
+<a href="http://www.xess.com/ho03000.html.">http://www.xess.com/ho03000.html.</a></p>
+<p>
+</p>
+<hr />
+<h1><a name="application_directory_tree">APPLICATION DIRECTORY TREE</a></h1>
+<pre>
+  top ---+
+         |
+         +--- XS_LIB
+         |
+         +--- XSA ---+
+         |           |
+         |           +---XSA_LIB
+         |           |
+         |           +---50  -----+
+         |           |            |
+         |           |            +--- test_dualport
+         |           |
+         |           +---100 -----+
+         |           |            |
+         |           |            +--- test_dualport
+         |           |
+         |           +---200 -----+
+         |           |            |
+         |           |            +--- test_dualport
+         |           |
+         |           +---3S1000---+
+         |                        |
+         |                        +--- test_dualport
+         |            
+         +--- XSB ---+
+                     |
+                     +---XSB_LIB
+                     |
+                     +---300E-----+
+                                  |
+                                  +--- test_dualport
+                     
+The content of each subdirectory is listed below.</pre>
+<ul>
+<li><strong><a name="item_xs_lib">XS_LIB</a></strong><br />
+</li>
+This directory stores the VHDL files for all cores that are applicable to all models
+of XESS FPGA boards.  This includes the dualport module and the SDRAM controller core.
+<p></p>
+<li><strong><a name="item_xsa">XSA</a></strong><br />
+</li>
+This directory stores all the project directories for all the models of XSA Boards.
+<p></p>
+<li><strong><a name="item_xsa_lib">XSA_LIB</a></strong><br />
+</li>
+This directory stores the VHDL files for all cores that have been customized for the
+XSA Boards.  This includes the core for testing the SDRAM.
+<p></p>
+<li><strong><a name="item_50_2c_100_2c_200_2c_3s1000">50, 100, 200, 3S1000</a></strong><br />
+</li>
+Each of these directories stores the project directories for a particular model of
+XSA Board: XSA-50, XSA-100, XSA-200 or XSA-3S1000.
+<p></p>
+<li><strong><a name="item_xsb">XSB</a></strong><br />
+</li>
+This directory stores all the project directories for all the models of XSB Boards.
+<p></p>
+<li><strong><a name="item_xsb_lib">XSB_LIB</a></strong><br />
+</li>
+This directory stores the VHDL files for all cores that have been customized for the
+XSB Boards.  This includes the core for testing the SDRAM.
+<p></p>
+<li><strong><a name="item_300e">300E</a></strong><br />
+</li>
+Each of these directories stores the project directories for a particular model of
+XSB Board: XSB-300E.
+<p></p>
+<li><strong><a name="item_test_dualport_3a">test_dualport:</a></strong><br />
+</li>
+This directory contains a test_dualport.vhd file that instantiates the dualport module
+and SDRAM test module
+for a particular model of XESS FPGA board.  The test_dualport.ucf file stores the appropriate
+pin assignments for the board.  The test_dualport.npl file allows you to rebuild the application
+using WebPACK.  The resulting test_dualport.bit file can be downloaded to the FPGA board to
+test the dualport access to the SDRAM.
+<p></p></ul>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Dave Vanden Bout, X Engineering Software Systems Corp.</p>
+<p>Send bug reports to <a href="mailto:bugs@xess.com.">bugs@xess.com.</a></p>
+<p>
+</p>
+<hr />
+<h1><a name="copyright_and_license">COPYRIGHT AND LICENSE</a></h1>
+<p>Copyright 2005 by X Engineering Software Systems Corporation.</p>
+<p>These applications can be freely distributed and modified
+as long as you do not remove the attributions to the author or his employer.</p>
+<p>
+</p>
+<hr />
+<h1><a name="history">HISTORY</a></h1>
+<dl>
+<dt><strong><a name="item_version_1_2e0__2d_07_2f12_2f05">Version 1.0 - 07/12/05</a></strong><br />
+</dt>
+<ul>
+<li></li>
+Initial revision.
+<p></p></ul>
+</dl>
+
+</body>
+
+</html>
