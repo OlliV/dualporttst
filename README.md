@@ -1,4 +1,5 @@
 DUALPORT MODULE FOR SDRAM CONTROLLER
+====================================
 
     These are the design files for the dualport module that attaches to the
     SDRAM controller core and the surrounding application that uses the core
@@ -8,6 +9,7 @@ DUALPORT MODULE FOR SDRAM CONTROLLER
     http://www.xess.com/ho03000.html.
 
 APPLICATION DIRECTORY TREE
+--------------------------
 
       top ---+
              |
@@ -85,12 +87,14 @@ APPLICATION DIRECTORY TREE
         the dualport access to the SDRAM.
 
 AUTHOR
+------
 
     Dave Vanden Bout, X Engineering Software Systems Corp.
 
     Send bug reports to bugs@xess.com.
 
 COPYRIGHT AND LICENSE
+---------------------
 
     Copyright 2005 by X Engineering Software Systems Corporation.
 
@@ -98,6 +102,7 @@ COPYRIGHT AND LICENSE
     do not remove the attributions to the author or his employer.
 
 HISTORY
+-------
 
     Version 1.0 - 07/12/05
 
